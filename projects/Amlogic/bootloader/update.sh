@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2017-2018 Team LibreELEC (https://libreelec.tv)
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 [ -z "$SYSTEM_ROOT" ] && SYSTEM_ROOT=""
@@ -125,7 +125,7 @@ if [ "${SUBDEVICE}" == "Odroid_C2" ]; then
   fi
 fi
 
-if [ "${SUBDEVICE}" == "LePotato" ]; then
+if [ "${SUBDEVICE}" == "LePotato" -o "${SUBDEVICE}" == "Odroid_N2" ]; then
   if [ -f $SYSTEM_ROOT/usr/share/bootloader/boot-logo-1080.bmp.gz ]; then
     echo "Updating boot logos..."
     cp -p $SYSTEM_ROOT/usr/share/bootloader/boot-logo-1080.bmp.gz $BOOT_ROOT

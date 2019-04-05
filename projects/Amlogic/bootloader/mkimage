@@ -43,7 +43,7 @@ if [ "${SUBDEVICE}" != "Generic" ]; then
     fi
   fi
 
-  if [ "${SUBDEVICE}" == "LePotato" ]; then
+  if [ "${SUBDEVICE}" == "LePotato" -o "${SUBDEVICE}" == "Odroid_N2" ]; then
     if [ -f "$RELEASE_DIR/3rdparty/bootloader/boot-logo-1080.bmp.gz" ]; then
       mcopy $RELEASE_DIR/3rdparty/bootloader/boot-logo-1080.bmp.gz ::
     fi
